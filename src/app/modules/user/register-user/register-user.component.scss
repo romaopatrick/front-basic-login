@@ -2,32 +2,38 @@
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+
     .register-form-div {
         background-color: #fff;
-        height: 40%;
+        height: 45%;
         display: flex;
         flex-direction: column;
         border: 2px solid #3f51b5;
-        border-radius: 10px;
+        border-radius: 30px;
+        gap: 2.5vh;
         padding: 3%;
         margin: 3vh 1.5vw;
-        justify-content: center;
-        align-items: center;
+        width: 20%;
 
         .register-form-div-label {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-family: 'Lato', 'Roboto', sans-serif;
-            align-self: flex-start;
+            align-self: center;
             color: #3f51b5;
         }
 
         .register-form {
+            padding: 2px 0 2px 0;
+            width: 100%;
             display: grid;
             grid-template:  "fullname fullname"
                             "email email"
                             "password cpassword";
 
-            column-gap: 2%;
+            font-size: 1.2rem;
+            column-gap: 3%;
             box-sizing: border-box;
             .form-fullname {
                 grid-area: fullname;
@@ -41,13 +47,37 @@
             .form-confirm-password {
                 grid-area: cpassword;
             }
-            
+
+            .title {
+                text-transform: capitalize;
+            }
         }
         .register-form-button {
-            margin-top: 5vh;
-            border-radius: 10px;
+            border-radius: 30px;
             border: 1px solid #3f51b5 ;
+            height: 4vh;
+            font-size: 1.2rem;
+
+            &:hover {
+                color: white;
+                background-color: #3f51b5;
+                &:disabled {
+                    color: grey;
+                    border: 1px solid grey;
+                    background-color: white;
+                }
+            }
+            &:disabled {
+                color: grey;
+                border: 1px solid grey;
+                background-color: white;
+            }
+            
         }
     }
-    
+}
+
+.password-info {
+    z-index: 10;
+    position: absolute;
 }

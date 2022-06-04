@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LgHeaderComponent } from './core/lg-header/lg-header.component';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 
 
@@ -19,7 +20,8 @@ import { LgHeaderComponent } from './core/lg-header/lg-header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatPasswordStrengthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
